@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="car buttm.css">
+    <link rel="stylesheet" href="car exlant.css">
+    <link rel="stylesheet" href="car res.css">
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="../my project.html">حجزتذاكر طيران</a></li>
+            <!-- <li><a href="Reservations.html">Reservations</a></li> -->
+            <li><a href="About us"></a>About us</li>
+        </ul>
+    </div>
+     <div class="lin">
+        <ul>
+            <li><h1 style="font-family: Arial, Helvetica, sans-serif;"><center> مرحبا بكم في شركة الحجز الذكي لحجوزات السيارات</center></h1></li>
+           
+        </ul>
+         <img src="FCA-2025-Dodge-SRT-Hellcat-10.jpg" width="100%" height="400px">
+         <link rel="a" href="a">
+    </div>
+
+<!-- زر احجز الآن -->
+<button id="openFormBtn" class="btn">احجز الآن</button>
+
+<!-- النموذج المخفي -->
+<div id="myForm" class="modal">
+    <div class="modal-content">
+        <h2>نموذج الحجز</h2>
+        <form>
+            <label>الاسم:</label><br>
+            <input type="text" name="name" required><br><br>
+
+            <label>البريد الإلكتروني:</label><br>
+            <input type="email" name="email" required><br><br>
+            
+           <label for="car">نوع السيارة:</label><br>
+<select id="car" name="car" required>
+  <option value="">اختر نوع السيارة</option>
+  <option value="ferary">فيراري</option>
+  <option value="toyota">تويوتا</option>
+  <option value="marsadic">مرسديس</option>
+  <option value="BMW">بي ام دبليو</option>
+</select><br>
+            
+           <label>طريقة الدفع:</label><br>
+<select name="payment" required>
+    <option value="">اختر طريقة الدفع</option>
+    <option value="credit-card">بطاقة ائتمان</option>
+    <option value="paypal">PayPal</option>
+    <option value="cash">نقدًا عند التسليم</option>
+</select><br><br>
+
+            <label>التاريخ الايجار :</label><br>
+            <input type="date" name="date" required><br><br>
+            <label>الوقت:</label><br>
+            <input type="time" name="time" required><br><br>
+            
+            <button type="submit"> <a href="my project.html"></a>أرسل</button>
+            <button type="button" id="closeFormBtn">إغلاق</button>
+            
+            </form>
+            <p id="successMsg" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+              لقد تم حجز مقعدك بنجاح!
+            </p>
+        </div>
+    </div>
+
+    <!-- هنا تربط جافا سكريبت -->
+    <script src="car.js"></script>
+        </form>
+    </div>
+</div>
+
+<script>
+    const openBtn = document.getElementById('openFormBtn');
+    const closeBtn = document.getElementById('closeFormBtn');
+    const modal = document.getElementById('myForm');
+
+    openBtn.onclick = () => { modal.style.display = 'block'; }
+    closeBtn.onclick = () => { modal.style.display = 'none'; }
+
+    // إغلاق عند الضغط خارج المودال
+    window.onclick = (e) => {
+        if (e.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+   <!-- تأكد من إضافة رابط Font Awesome في الـ head -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="features">
+    <h1>ما يميزنا</h1>
+    <div class="feature-list">
+        <div class="feature">
+            <i class="fas fa-plane-departure fa-3x"></i>
+            <h2>حجز سريع وسهل</h2>
+            <p>يمكنك حجز سيارتك خلال دقائق فقط، بدون تعقيدات أو خطوات كثيرة.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-tags fa-3x"></i>
+            <h2>أفضل الأسعار</h2>
+            <p>نقدم لك أسعار تنافسية مع عروض خاصة لضمان حصولك على أفضل قيمة مقابل أموالك.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-headset fa-3x"></i>
+            <h2>دعم العملاء على مدار الساعة</h2>
+            <p>فريقنا متاح لمساعدتك في أي استفسار أو مشكلة على مدار 24 ساعة، 7 أيام في الأسبوع.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-globe fa-3x"></i>
+            <h2>خيارات متنوعة للسيارات</h2>
+            <p>نوفر سيارات مع إمكانية اختيار الشركات المصنعه والمواعيد المناسبة لك.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-lock fa-3x"></i>
+            <h2>حماية بياناتك</h2>
+            <p>نضمن حماية معلوماتك الشخصية وبيانات بطاقتك الائتمانية بأعلى معايير الأمان.</p>
+        </div>
+    </div>
+</div>
+     
+    <div>
+        <table>
+            <tr>
+                <td> <img src="maxresdefault (2).jpg" width="300px" height="230px"></td>
+                <td> <img src="maxresdefault (1).jpg" width="300px" height="230px"></td>
+                <td> <img src="maxresdefault (4).jpg" width="300px" height="230px"></td>
+                <td> <img src="Ferrari-LaFerrari-139849.jpg" width="" height="230px"></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="company-info">
+      <h3>شركة الحجز الذكي</h3>
+      <p>email: badralmuzallam@gmail.com</p>
+      <p>Phone: +967 770513767</p>
+    </div>
+    <div class="social-links">
+      <h4>تابعنا على:</h4>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="https://www.twitter.com" target="_blank">Twitter</a>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </div>
+    <div class="quick-links">
+      <h4>روابط سريعة:</h4>
+      <a href="#">من نحن</a>
+      <a href="#">اتصل بنا</a>
+      <a href="#">سياسة الخصوصية</a>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2025 شركة الحجز الذكي. كل الحقوق محفوظة.</p>
+</footer>
+   
+</body>
+</html>
